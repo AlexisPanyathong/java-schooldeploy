@@ -1,0 +1,35 @@
+/ curl cheetsheet
+
+// username - ygalyacfjtdwow
+// password - 0cbf9378389853fd69c8e94092f4b90ee9e84a049b5f3974557f89ace15b75b4
+// db name - d203vegpjfpfik
+// host name - ec2-107-21-200-103.compute-1.amazonaws.com
+
+// postgres://ygalyacfjtdwow:0cbf9378389853fd69c8e94092f4b90ee9e84a049b5f3974557f89ace15b75b4@ec2-107-21-200-103.compute-1.amazonaws.com:5432/d203vegpjfpfik
+
+// 1 - GET /courses/courses
+curl -X GET "http://ap-schooldeployapp.herokuapp.com/courses/courses" -H "accept: application/json"
+
+// 2 - GET /courses/studcount
+curl -X GET "http://ap-schooldeployapp.herokuapp.com/courses/studcount" -H "accept: application/json"
+
+// 3 - DELETE /courses/courses/{id}
+curl -X DELETE "http://ap-schooldeployapp.herokuapp.com/courses/courses/1" -H "accept: */*"
+
+// 4 - GET /students/students
+curl -X GET "http://ap-schooldeployapp.herokuapp.com/students/students" -H "accept: application/json"
+
+// 5 - GET /students/Student/{StudentId}
+curl -X GET "http://ap-schooldeployapp.herokuapp.com/students/Student/2" -H "accept: application/json"
+
+// 6 - GET /students/student/namelike/{name}
+curl -X GET "http://ap-schooldeployapp.herokuapp.com/students/student/namelike/bob" -H "accept: application/json"
+
+// 7 - POST /students/Student
+curl -X POST "http://ap-schooldeployapp.herokuapp.com/students/Student" -H "Content-Type: application/json" -d "{ \"studname\": \"Billy\" }"
+
+// 8 - PUT /students/Student/{Studentid}
+curl -X PUT -d "{ \"studid\": 2, \"studname\": \"Joel\" }" "http://ap-schooldeployapp.herokuapp.com/students/Student/2" -H "Content-Type: application/json"
+
+// 9 - DELETE /students/Student/{Studentid}
+curl -X DELETE "http://ap-schooldeployapp.herokuapp.com/students/Student/1" -H "accept: */*"
